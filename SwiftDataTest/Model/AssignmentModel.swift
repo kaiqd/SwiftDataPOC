@@ -5,14 +5,21 @@
 //  Created by Kaique Diniz on 11/06/24.
 //
 
+import Foundation
 import SwiftUI
+import SwiftData
 
-struct AssignmentModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+@Model
+class AssignmentModel {    
+    var name: String
+    var subject: String
+    var dateExpiration: Date
+    var score: Int
+    
+    init(name: String, subject: String, dateExpiration: Date, score: Int) {
+        self.name = name
+        self.subject = subject
+        self.dateExpiration = dateExpiration
+        self.score = score
     }
-}
-
-#Preview {
-    AssignmentModel()
 }
